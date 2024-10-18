@@ -1,0 +1,18 @@
+{
+  "name": "zeta-test",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "zeta-test.js",
+  "scripts": {
+    "test": "node zeta-test.js"
+  },
+  "dependencies": {
+    "@drift-labs/sdk": "2.97.0-beta.8",
+    "@solana/web3.js": "^1.95.3",
+    "@zetamarkets/sdk": "^1.46.1",
+    "dotenv": "^16.4.5",
+    "ioredis": "^5.4.1",
+    "winston": "^3.15.0",
+    "fs": "0.0.1-security"
+  }
+}
