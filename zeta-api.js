@@ -309,6 +309,10 @@ export class ZetaClientWrapper {
   }
   
   calculatePricesAndSize(side, marketIndex, balance, settings) {
+
+    // force update orderbook
+    Exchange.getPerpMarket(marketIndex).forceFetchOrderbook();
+
     const orderbook = Exchange.getOrderbook(marketIndex);
     const currentPrice = side === types.Side.BID ? orderbook.asks[0].price : orderbook.bids[0].price;
     const slippage = 0.00005; // 0.005%
